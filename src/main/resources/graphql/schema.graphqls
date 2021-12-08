@@ -1,0 +1,23 @@
+type Message {
+    text: String
+}
+
+type Query {
+    addMessage: Message
+    allData: [Message]
+}
+
+type Subscription {
+    data: Message
+}
+
+type Mutation {
+    add(message: String): Message
+}
+
+
+schema {
+    query: Query
+    mutation: Mutation
+    subscription: Subscription
+}
